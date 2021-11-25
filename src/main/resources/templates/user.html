@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <!-- Generated: 2018-04-06 16:27:42 +0200 -->
+    <title>Homepage - tabler.github.io - a responsive, flat and full featured admin template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <script th:src="@{/static/js/require.min.js}"></script>
+    <script>
+      requirejs.config({
+          baseUrl: '.'
+      });
+    </script>
+    <!-- Dashboard Core -->
+    <link th:href="@{/static/css/dashboard.css}" rel="stylesheet" />
+    <script th:src="@{/static/js/dashboard.js}"></script>
+    <!-- c3.js Charts Plugin -->
+    <link th:href="@{/static/plugins/charts-c3/plugin.css}" rel="stylesheet" />
+    <script th:src="@{/static/plugins/charts-c3/plugin.js}"></script>
+    <!-- Google Maps Plugin -->
+    <link th:href="@{/static/plugins/maps-google/plugin.css}" rel="stylesheet" />
+    <script th:src="@{/static/plugins/maps-google/plugin.js}" ></script>
+    <!-- Input Mask Plugin -->
+    <script th:src="@{/static/plugins/input-mask/plugin.js}"></script>
+  </head>
+  <body class="">
+    <div class="page">
+      <div class="page-main">
+        <div class="header py-4">
+          <div class="container">
+            <div class="d-flex">
+              <a class="header-brand" href="./index.html">
+                <img th:src="@{/static/images/tabler.svg}" class="header-brand-img" alt="tabler logo"> UnitCoin Bot
+              </a>
+              
+              <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                <span class="header-toggler-icon"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-3 ml-auto">
+                <form class="input-icon my-3 my-lg-0">
+                  <input type="search" class="form-control header-search" placeholder="Search…" tabindex="1">
+                  <div class="input-icon-addon">
+                    <i class="fe fe-search"></i>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg order-lg-first">
+                <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                  <li class="nav-item">
+                    <a href="./index.html" class="nav-link active"><i class="fe fe-home"></i>Главная</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="users" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i>Пользователи</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i>Пополнения</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="./form-elements.html" class="nav-link"><i class="fe fe-check-square"></i>Рассылка</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./gallery.html" class="nav-link"><i class="fe fe-image"></i>Информация</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./docs/index.html" class="nav-link"><i class="fe fe-file-text"></i>Настройки</a>
+                  </li>
+                  <li class="nav-item">
+                    <a th:href="@{/logout}" class="nav-link"><i class="fe fe-file-text"></i>Выход</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-3 my-md-5">
+          <div class="container">
+            <div class="page-header">
+              <h1 class="page-title">
+                Пользователи
+              </h1>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Все пользователи</h3>
+                </div>
+                <div class="table-responsive">
+                  <table class="table card-table table-vcenter text-nowrap">
+                    <thead>
+                    <tr>
+                      <th class="w-1">ID</th>
+                      <th>NickName</th>
+                      <th>Баланс</th>
+                      <th>Уровень</th>
+                      <th>Дата регистрации</th>
+                      <th>Бан</th>
+                      <th>Price</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="user: ${users}">
+                      <td><span class="text-muted" th:text="${user.chat_id}"></span></td>
+                      <td th:text="${user.user_name}"></td>
+                      <td th:text="${user.balance}"></td>
+                      <td th:text="${user.level}"></td>
+                      <td text="None"></td>
+                      <td th:switch="${user.ban}">
+                        <span th:case="false"  class="status-icon bg-success">Не в бане</span>
+                        <span th:case="true"  class="status-icon bg-danger">В бане</span>
+                      </td>
+                      <td class="text-right">
+                        <form th:case="false" th:action="'/user/ban/' + ${user.chat_id}" method="post">
+                          <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Забанить</a>
+                        </form>
+                        <form th:case="" th:action="'/user/ban/' + ${user.chat_id}" method="post">
+                          <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Разбанить</a>
+                        </form>
+
+                      </td>
+                      <td>
+                        <a class="icon" href="javascript:void(0)">
+                          <i class="fe fe-edit"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span class="text-muted">001402</span></td>
+                      <td><a href="invoice.html" class="text-inherit">UX Wireframes</a></td>
+                      <td>
+                        Adobe
+                      </td>
+                      <td>
+                        87956421
+                      </td>
+                      <td>
+                        12 Apr 2017
+                      </td>
+                      <td>
+                        <span class="status-icon bg-warning"></span> Pending
+                      </td>
+                      <td>$1200</td>
+                      <td class="text-right">
+                        <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Manage</a>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">Actions</button>
+                        </div>
+                      </td>
+                      <td>
+                        <a class="icon" href="javascript:void(0)">
+                          <i class="fe fe-edit"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span class="text-muted">001403</span></td>
+                      <td><a href="invoice.html" class="text-inherit">New Dashboard</a></td>
+                      <td>
+                        Bluewolf
+                      </td>
+                      <td>
+                        87952621
+                      </td>
+                      <td>
+                        23 Oct 2017
+                      </td>
+                      <td>
+                        <span class="status-icon bg-warning"></span> Pending
+                      </td>
+                      <td>$534</td>
+                      <td class="text-right">
+                        <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Manage</a>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">Actions</button>
+                        </div>
+                      </td>
+                      <td>
+                        <a class="icon" href="javascript:void(0)">
+                          <i class="fe fe-edit"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span class="text-muted">001404</span></td>
+                      <td><a href="invoice.html" class="text-inherit">Landing Page</a></td>
+                      <td>
+                        Salesforce
+                      </td>
+                      <td>
+                        87953421
+                      </td>
+                      <td>
+                        2 Sep 2017
+                      </td>
+                      <td>
+                        <span class="status-icon bg-secondary"></span> Due in 2 Weeks
+                      </td>
+                      <td>$1500</td>
+                      <td class="text-right">
+                        <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Manage</a>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">Actions</button>
+                        </div>
+                      </td>
+                      <td>
+                        <a class="icon" href="javascript:void(0)">
+                          <i class="fe fe-edit"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span class="text-muted">001405</span></td>
+                      <td><a href="invoice.html" class="text-inherit">Marketing Templates</a></td>
+                      <td>
+                        Printic
+                      </td>
+                      <td>
+                        87956621
+                      </td>
+                      <td>
+                        29 Jan 2018
+                      </td>
+                      <td>
+                        <span class="status-icon bg-danger"></span> Paid Today
+                      </td>
+                      <td>$648</td>
+                      <td class="text-right">
+                        <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Manage</a>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">Actions</button>
+                        </div>
+                      </td>
+                      <td>
+                        <a class="icon" href="javascript:void(0)">
+                          <i class="fe fe-edit"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span class="text-muted">001406</span></td>
+                      <td><a href="invoice.html" class="text-inherit">Sales Presentation</a></td>
+                      <td>
+                        Tabdaq
+                      </td>
+                      <td>
+                        87956621
+                      </td>
+                      <td>
+                        4 Feb 2018
+                      </td>
+                      <td>
+                        <span class="status-icon bg-secondary"></span> Due in 3 Weeks
+                      </td>
+                      <td>$300</td>
+                      <td class="text-right">
+                        <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Manage</a>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">Actions</button>
+                        </div>
+                      </td>
+                      <td>
+                        <a class="icon" href="javascript:void(0)">
+                          <i class="fe fe-edit"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container">
+          
+        </div>
+      </div>
+      
+    </div>
+  
+</body>
+</html>

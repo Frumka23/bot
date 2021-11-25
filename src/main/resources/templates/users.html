@@ -1,100 +1,170 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="ru" dir="ltr">
 <head>
-    <div th:replace="header :: header"></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <!-- Generated: 2018-04-06 16:27:42 +0200 -->
+    <title>Homepage - tabler.github.io - a responsive, flat and full featured admin template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <script th:src="@{/static/js/require.min.js}"></script>
+    <script>
+        requirejs.config({
+            baseUrl: '.'
+        });
+    </script>
+    <!-- Dashboard Core -->
+    <link th:href="@{/static/css/dashboard.css}" rel="stylesheet" />
+    <script th:src="@{/static/js/dashboard.js}"></script>
+    <!-- c3.js Charts Plugin -->
+    <link th:href="@{/static/plugins/charts-c3/plugin.css}" rel="stylesheet" />
+    <script th:src="@{/static/plugins/charts-c3/plugin.js}"></script>
+    <!-- Google Maps Plugin -->
+    <link th:href="@{/static/plugins/maps-google/plugin.css}" rel="stylesheet" />
+    <script th:src="@{/static/plugins/maps-google/plugin.js}" ></script>
+    <!-- Input Mask Plugin -->
+    <script th:src="@{/static/plugins/input-mask/plugin.js}"></script>
 </head>
-<body>
-<div class="container-fluid" id="wrapper">
-    <div class="row">
-        <nav class="sidebar col-xs-12 col-sm-4 col-lg-3 col-xl-2">
-            <h1 class="site-title"><a href="admin.html"><em class="fa fa-rocket"></em>TeleMoney</a></h1>
+<body class="">
+<div class="page">
+    <div class="page-main">
+        <div class="header py-4">
+            <div class="container">
+                <div class="d-flex">
+                    <a class="header-brand" href="./index.html">
+                        <img th:src="@{/static/images/tabler.svg}" class="header-brand-img" alt="tabler logo"> UnitCoin Bot
+                    </a>
 
-            <a class="btn btn-default" id="menu-toggle"><em class="fa fa-bars"></em></a>
-            <ul class="nav nav-pills flex-column sidebar-nav">
-                <li class="nav-item"><a class="nav-link" href="admin"><em class="fa fa-dashboard"></em> Главная <span class="sr-only">(current)</span></a></li>
-                <li class="nav-item"><a class="nav-link active" href="users"><em class="fa fa-calendar-o"></em> Пользователи </a></li>
-                <li class="nav-item"><a class="nav-link" href="pay"><em class="fa fa-bar-chart"></em> Выводы </a></li>
-                <li class="nav-item"><a class="nav-link" href="payment"><em class="fa fa-bar-chart"></em> Оплата </a></li>
-                <li class="nav-item"><a class="nav-link" href="info"><em class="fa fa-hand-o-up"></em> Информация</a></li>
-            </ul>
-            <a href="login.html" class="logout-button"><em class="fa fa-power-off"></em>Выйти</a>
-        </nav>
-        <main class="col-xs-12 col-sm-8 col-lg-9 col-xl-10 pt-3 pl-4 ml-auto">
-            <header class="page-header row justify-center">
-                <div class="col-md-12 col-lg-12" >
-                    <h1 class="float-left text-center text-md-left">Пользователи</h1>
+                    <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                        <span class="header-toggler-icon"></span>
+                    </a>
                 </div>
-                <div class="clear"></div>
-            </header>
-            <section class="row">
-                <div class="col-sm-12">
-                    <section class="row">
-                        <div class="col-md-12 col-lg-12">
-                            <div class="card mb-4">
-                                <div class="card-block">
-                                    <h3 class="card-title">Пользователи</h3>
-                                    <div class="table-responsive">
-                                        <table class="table table-striped" id="user1">
-                                            <thead>
-                                            <tr>
-                                                <th>User ID</th>
-                                                <th>Ник</th>
-                                                <th>Баланс</th>
-                                                <th>Уровень</th>
-                                                <th>Реферал</th>
-                                                <th>Бан</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr th:each="user: ${users}">
-                                                <td><a th:href="'/details/' + ${user.chat_id}" th:text="${user.chat_id}"></a></td>
-                                                <td th:text="${user.user_name}"></td>
-                                                <td th:text="${user.balance}"></td>
-                                                <td th:text="${user.level}"></td>
-                                                <td th:text="${user.referral}"></td>
-                                                <td th:switch="${user.ban}">
-                                                    <form th:case="false" th:action="'/user/ban/' + ${user.chat_id}" method="post">
-                                                        <button  type="submit" class="btn btn-success">
-                                                            Забанить
-                                                        </button>
-                                                    </form>
-                                                    <form th:case="true" th:action="'/user/unban/' + ${user.chat_id}" method="post">
-                                                        <button  type="submit" class="btn btn-danger">
-                                                            Разбанить
-                                                        </button>
-                                                    </form>
-                                                </td>
-                                                <td>
-                                                    <form  th:action="'/details/' + ${user.chat_id}" method="get">
-                                                        <button  type="submit" class="btn btn-success">
-                                                            Изменить
-                                                        </button>
-                                                    </form>
-                                                </td>
-
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+            </div>
+        </div>
+        <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 ml-auto">
+                        <form class="input-icon my-3 my-lg-0">
+                            <input type="search" class="form-control header-search" placeholder="Search…" tabindex="1">
+                            <div class="input-icon-addon">
+                                <i class="fe fe-search"></i>
                             </div>
-                        </div>
-                    </section>
+                        </form>
+                    </div>
+                    <div class="col-lg order-lg-first">
+                        <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                            <li class="nav-item">
+                                <a href="/index.html" class="nav-link active"><i class="fe fe-home"></i>Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/users" class="nav-link" data-toggle="dropdown"><i class="fe fe-users"></i>Пользователи</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-dollar-sign"></i>Пополнения</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="./form-elements.html" class="nav-link"><i class="fe fe-credit-card"></i>Рассылка</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./gallery.html" class="nav-link"><i class="fe fe-help-circle"></i>Информация</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./docs/index.html" class="nav-link"><i class="fe fe-settings"></i>Настройки</a>
+                            </li>
+                            <li class="nav-item">
+                                <a th:href="@{/logout}" class="nav-link"><i class="fe fe-x-square"></i>Выход</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </div>
+        <div class="my-3 my-md-5">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">
+                        Пользователи
+                    </h1>
+                </div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Все пользователи</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table card-table table-vcenter text-nowrap">
+                                <thead>
+                                <tr>
+                                    <th class="w-1">ID</th>
+                                    <th>NickName</th>
+                                    <th>Баланс</th>
+                                    <th>Уровень</th>
+                                    <th>Дата регистрации</th>
+                                    <th>Бан</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="user: ${users}">
+                                    <td><span class="text-muted" th:text="${user.chat_id}"></span></td>
+                                    <td th:text="${user.user_name}"></td>
+                                    <td th:text="${user.balance}"></td>
+                                    <td th:text="${user.level}"></td>
+                                    <td> None </td>
+                                    <td th:switch="${user.ban}">
+                                        <p th:case="false">
+                                        <span   class="status-icon bg-success"></span>
+                                        Не в бане
+                                        </p>
+                                        <p th:case="true">
+                                        <span   class="status-icon bg-danger"></span>
+                                        В бане
+                                        </p>
+                                    </td>
+                                    <td class="text" th:switch="${user.ban}">
+                                        <form th:case="false" th:action="'/user/ban/' + ${user.chat_id}" method="post">
+                                            <button type="submit" class="btn btn-secondary btn-sm">Забанить</button>
+                                        </form>
+                                        <form th:case="true" th:action="'/user/unban/' + ${user.chat_id}" method="post">
+                                            <button type="submit" class="btn btn-secondary btn-sm">Разбанить</button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <a class="icon" th:href="'/details/' + ${user.chat_id}">
+                                            <i class="fe fe-edit"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
     </div>
+    <div class="footer">
+        <div class="container">
+
+        </div>
+    </div>
+
 </div>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-<script th:src="@{/static/js/bootstrap.min.js}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<div th:replace="footer :: footer"></div>
 </body>
 </html>

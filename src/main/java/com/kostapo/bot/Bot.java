@@ -1,11 +1,16 @@
 package com.kostapo.bot;
 
 import com.kostapo.bot.controller.WebHookController;
+import com.kostapo.bot.repository.QiwiRepository;
+import com.kostapo.bot.repository.QiwiVklRepository;
+import com.kostapo.bot.repository.UserRepository;
+import com.kostapo.bot.repository.WithdrawRepository;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Value;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramWebhookBot;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
+import org.telegram.telegrambots.meta.api.methods.ParseMode;
 import org.telegram.telegrambots.meta.api.methods.groupadministration.GetChatMember;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.*;
@@ -22,7 +27,6 @@ public class Bot extends TelegramWebhookBot {
 
     @Value("${bot.webhookpath}")
     private String webHookPath;
-
 
 
     public Bot(DefaultBotOptions options) {

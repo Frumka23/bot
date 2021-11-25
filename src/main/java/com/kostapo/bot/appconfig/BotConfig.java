@@ -1,6 +1,10 @@
 package com.kostapo.bot.appconfig;
 
 import com.kostapo.bot.Bot;
+import com.kostapo.bot.repository.QiwiRepository;
+import com.kostapo.bot.repository.QiwiVklRepository;
+import com.kostapo.bot.repository.UserRepository;
+import com.kostapo.bot.repository.WithdrawRepository;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;

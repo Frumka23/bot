@@ -17,7 +17,11 @@ public interface WithdrawRepository extends CrudRepository<Withdraw, Integer> {
 
     List<Withdraw> findAllByStatus(String status);
 
+    @Query(value = "SELECT max(id_draw) from Withdraw where id_user = (:userId)")
+    String getIdDraw(String userId);
 
+    @Query(value = "select sum(amount) from Withdraw where status = 'SUCCESS'")
+    String sumWithdraw();
 
     @Transactional
     @Modifying

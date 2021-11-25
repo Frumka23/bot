@@ -1,0 +1,156 @@
+нояб. 25, 2021 10:15:10 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-7777"]
+нояб. 25, 2021 10:15:10 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Tomcat]
+нояб. 25, 2021 10:15:10 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet engine: [Apache Tomcat/9.0.38]
+нояб. 25, 2021 10:15:10 PM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring embedded WebApplicationContext
+нояб. 25, 2021 10:15:13 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:15:13 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-7777"]
+нояб. 25, 2021 10:15:13 PM com.google.cloud.sql.core.CoreSocketFactory getInstance
+INFO: First Cloud SQL connection, generating RSA key pair.
+нояб. 25, 2021 10:15:20 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:15:22 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:15:25 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:15:27 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:15:30 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:15:32 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:15:34 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:15:36 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:15:38 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:21:28 PM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring DispatcherServlet 'dispatcherServlet'
+нояб. 25, 2021 10:21:47 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 перешел на вкладку 'Профиль'
+нояб. 25, 2021 10:29:47 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1604927559 перешел на вкладку 'Партнерство'
+нояб. 25, 2021 10:34:51 PM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+WARNING: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [484] milliseconds.
+нояб. 25, 2021 10:36:21 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 перешел на вкладку 'Главное меню'
+нояб. 25, 2021 10:43:15 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 перешел на вкладку 'Профиль'
+нояб. 25, 2021 10:43:28 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 перешел на вкладку 'Обновить Qiwi кошелек'
+нояб. 25, 2021 10:43:53 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 обновил свой кошелек
+нояб. 25, 2021 10:44:52 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:44:54 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:45:03 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:45:07 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:45:11 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:45:14 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:45:16 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:45:23 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:45:25 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 10:45:27 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:14:24 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:14:26 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:14:31 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:14:43 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:14:47 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:14:50 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:14:54 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:15:07 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:15:15 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:15:17 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:43:52 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:43:54 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:44:16 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:44:28 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:44:34 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:44:36 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:44:41 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:45:01 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:45:04 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:45:06 PM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 25, 2021 11:55:02 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1604927559 перешел на вкладку 'Профиль'
+нояб. 25, 2021 11:55:13 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1604927559 перешел на вкладку 'Главное меню'
+нояб. 25, 2021 11:55:31 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1604927559 перешел на вкладку 'Профиль'
+нояб. 25, 2021 11:55:40 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1604927559 перешел на вкладку 'Вывод средств'
+нояб. 25, 2021 11:58:46 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 перешел на вкладку 'Вывод средств'
+нояб. 25, 2021 11:59:27 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 перешел на вкладку 'Профиль'
+нояб. 25, 2021 11:59:41 PM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 перешел на вкладку 'Вывод средств'
+нояб. 26, 2021 12:11:11 AM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 перешел на вкладку 'Профиль'
+нояб. 26, 2021 12:11:25 AM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 перешел на вкладку 'Вывод средств'
+нояб. 26, 2021 12:11:40 AM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1016547568 создал заявку на вывод в размере 38.8 рублей
+нояб. 26, 2021 12:13:10 AM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 26, 2021 12:13:27 AM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1604927559 перешел на вкладку 'Главное меню'
+нояб. 26, 2021 12:13:34 AM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1604927559 перешел на вкладку 'Профиль'
+нояб. 26, 2021 12:13:46 AM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1604927559 перешел на вкладку 'Главное меню'
+нояб. 26, 2021 12:13:54 AM com.kostapo.bot.controller.WebHookController onUpdateReceived
+INFO: Пользователь 1604927559 перешел на вкладку 'Информация'
+нояб. 26, 2021 12:14:06 AM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 26, 2021 12:14:10 AM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 26, 2021 12:14:12 AM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 26, 2021 12:14:14 AM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 26, 2021 12:14:17 AM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 26, 2021 12:14:24 AM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 26, 2021 12:14:53 AM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 26, 2021 12:14:56 AM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.
+нояб. 26, 2021 12:14:58 AM com.google.cloud.sql.core.CoreSocketFactory connect
+INFO: Connecting to Cloud SQL instance [unitcoinbot:asia-northeast3:unitcoin-bot] via SSL socket.

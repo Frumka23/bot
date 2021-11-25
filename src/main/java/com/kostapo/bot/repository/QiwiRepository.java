@@ -20,7 +20,16 @@ public interface QiwiRepository extends CrudRepository<Qiwi,Integer> {
     @Query(value = "SELECT idPay from Qiwi where data = (SELECT max(data) from Qiwi) and user_id IN (:userId)")
     String findByBillId(String userId);
 
+    @Query(value = "SELECT user_id from Qiwi where idPay = (:idPay)")
+    String findUserByBillId(String idPay);
 
+    @Transactional
+    @Modifying
+    @Query(value = "delete from Qiwi where idPay = (:idPay)")
+    void deleteQiwiIdPay(String idPay);
+
+    @Query(value = "from Qiwi where user_id = (:id) ORDER BY data DESC")
+    List<Object> userQiwiPay(String id);
 
     @Query(value = "from Qiwi where data < (:limit) and status = 'WAITING'")
     List<Qiwi> Data(ZonedDateTime limit);
@@ -33,6 +42,9 @@ public interface QiwiRepository extends CrudRepository<Qiwi,Integer> {
 
     @Query(value = "select sum(amount) from Qiwi where status = 'WAITING'")
     String sumNoBalance();
+
+
+
 
     @Transactional
     @Modifying

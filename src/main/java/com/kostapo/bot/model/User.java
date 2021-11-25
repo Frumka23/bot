@@ -31,14 +31,102 @@ public class User {
     @Column(name = "balance")
     private Double balance = 0.0;
 
+    public Double getBalance_vkl() {
+        return balance_vkl;
+    }
+
+    public void setBalance_vkl(Double balance_vkl) {
+        this.balance_vkl = balance_vkl;
+    }
+
+    @Column(name = "balance_vkl")
+    private Double balance_vkl = 0.0;
+
     @Column(name = "pay")
-    private BigDecimal payment;
+    private BigDecimal payment = BigDecimal.valueOf(0);
 
     @Column(name = "Purse")
     private String purse;
 
     @Column(name = "Ban")
     private Boolean Ban = false;
+
+    @Column(name = "referral_2")
+    private String Referral_2;
+
+    public String getLastMessage() {
+        return lastMessage;
+    }
+
+    public void setLastMessage(String lastMessage) {
+        this.lastMessage = lastMessage;
+    }
+
+    @Column(name = "lastMessage")
+    private String lastMessage = "Главное меню";
+
+    @Column(name = "top")
+    private Double top = 0.0;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Column(name = "password")
+    private String password;
+
+    public Double getUnt() {
+        return unt;
+    }
+
+    public void setUnt(Double unt) {
+        this.unt = unt;
+    }
+
+    @Column(name = "unt")
+    private Double unt = 0.0;
+
+    public Boolean getBlock() {
+        return block;
+    }
+
+    public void setBlock(Boolean block) {
+        this.block = block;
+    }
+
+    @Column(name = "block")
+    private Boolean block = false;
+
+    public Double getTop() {
+        return top;
+    }
+
+    public void setTop(Double top) {
+        this.top = top;
+    }
+
+    public Integer getIntScore() {
+        return intScore;
+    }
+
+    public void setIntScore(Integer intScore) {
+        this.intScore = intScore;
+    }
+
+    @Column(name = "int_score")
+    private Integer intScore;
+
+    public String getReferral_2() {
+        return Referral_2;
+    }
+
+    public void setReferral_2(String referral_2) {
+        Referral_2 = referral_2;
+    }
 
     public Boolean getBan() {
         return Ban;
